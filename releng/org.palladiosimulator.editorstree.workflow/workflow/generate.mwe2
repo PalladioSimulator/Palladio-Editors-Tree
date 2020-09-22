@@ -151,7 +151,7 @@ Workflow {
 	component = GapPatternPostProcessor {
 		folders =  {
 			gen = "platform:/resource/org.palladiosimulator.pcm.editor/src-gen"
-			src = "platform:/resource/org.palladiosimulator.pcm.editor/src-man"
+			src = "platform:/resource/org.palladiosimulator.pcm.editor/src"
 		}
 	}
 }	
