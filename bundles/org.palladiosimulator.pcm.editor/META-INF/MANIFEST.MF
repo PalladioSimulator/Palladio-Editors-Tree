@@ -42,5 +42,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.editors.commons.propertytabs,
  org.eclipse.core.databinding;bundle-version="1.4.2",
  org.eclipse.core.databinding.property;bundle-version="1.4.200",
- org.palladiosimulator.mdsdprofiles.api
+ org.palladiosimulator.mdsdprofiles.api,
+ org.palladiosimulator.pcm.editor.workflow;resolution:=optional
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.palladiosimulator.pcm.editor

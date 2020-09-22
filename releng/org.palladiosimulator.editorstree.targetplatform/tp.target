@@ -75,5 +75,13 @@
 <unit id="org.modelversioning.emfprofile.feature.feature.group" version="tbd"/>
 <repository location="https://updatesite.palladio-simulator.com/palladio-thirdparty-emfprofiles/nightly/"/>
 </location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
+<unit id="tools.mdsd.ecoreworkflow.umlecoregenerator.feature.feature.group" version="tbd"/>
+<repository location="https://updatesite.mdsd.tools/ecore-workflow/releases/latest/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
+<unit id="tools.mdsd.ecoreworkflow.umlecoregenerator.feature.feature.group" version="tbd"/>
+<repository location="https://updatesite.mdsd.tools/ecore-workflow/nightly/"/>
+</location>
 </locations>
 </target>
