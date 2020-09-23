@@ -1,25 +1,15 @@
-Palladio-Editors-Tree
-=====================
+# Palladio-Editors-Tree
 Tree editors for models of the Palladio Component Model (PCM).
 
+## Documentation
+For comprehensive documentation, please visit our [wiki page](https://sdqweb.ipd.kit.edu/wiki/Palladio_Component_Model).
 
-Eclipse Update Sites
------------------------------------------
+## Development Information
+We generate source code based on the metamodel during the build process and do not add generated artifacts to the repository. To generate the code, you have to either run the Maven build or the generation workflow (`generate.mwe2`).
 
-##### Latest Build
-- https://sdqweb.ipd.kit.edu/eclipse/palladio/editors/tree/releases/latest/
+## Support
+For support
+* visit our [issue tracking system](https://palladio-simulator.com/jira)
+* contact us via our [mailing list](https://lists.ira.uni-karlsruhe.de/mailman/listinfo/palladio-dev)
 
-##### Nightly Build
-- https://sdqweb.ipd.kit.edu/eclipse/palladio/editors/tree/nightly/
-
-Develop Palladio Tree Editors
------------------------------------------
-
-1. Download and install Eclipse Modeling Tools
-2. Download and install Eclipse plugin dependencies for Palladio development.
-	- Go to Eclipse->Help->Install New Software
-	- Add Architectural Templates nightly update site: "https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/releases/latest/".
-	- Install Palladio features.
-3. Clone repository
-	$ git clone https://github.com/PalladioSimulator/Palladio-Editors-Tree.git
-5. Import all plugins into the workbench.
+For professional support, please fill in our [contact form](http://www.palladio-simulator.com/about_palladio/support/).
