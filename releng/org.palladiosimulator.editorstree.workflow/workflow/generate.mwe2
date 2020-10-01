@@ -90,7 +90,7 @@ Workflow {
 		
 		replacement = {
 
-		    directory = "${pluginEditorDir}/src-gen"
+		    directory = "platform:/resource/org.palladiosimulator.pcm.editor/src-gen"
 		    wildcard = "**/*Editor.java"
 
 			mapping = {
