@@ -88,18 +88,11 @@ Workflow {
 	
 	component = RegexComponent {
 		
-			replacement = {
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/allocation/presentation/AllocationEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/core/composition/presentation/CompositionEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/usagemodel/presentation/UsagemodelEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/system/presentation/SystemEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/resourcetype/presentation/ResourcetypeEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/resourceenvironment/presentation/ResourceenvironmentEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/subsystem/presentation/SubsystemEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/repository/presentation/RepositoryEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/qosannotations/presentation/QosannotationsEditor.java"
+		replacement = {
 
-			
+		    directory = "${pluginEditorDir}/src-gen"
+		    wildcard = "**/*Editor.java"
+
 			mapping = {
 				from = "adapterFactory = new ComposedAdapterFactory"
 				to = "ComposedAdapterFactory compAdapterFactory = new ComposedAdapterFactory"
@@ -114,7 +107,7 @@ Workflow {
 			}
 			mapping = {
 				from = "import org.palladiosimulator.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;"
-				to = "import org.palladiosimulator.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;\nimport org.palladiosimulator.mdsdprofiles.provider.StereotypableElementDecoratorAdapterFactory;\nimport org.palladiosimulator.pcm.ui.provider.PalladioItemProviderAdapterFactory;\nimport org.eclipse.emf.edit.provider.IDisposable;"
+				to = "import org.palladiosimulator.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;\nimport org.palladiosimulator.editors.commons.propertytabs.PalladioAdapterFactoryContentProvider;\nimport org.palladiosimulator.mdsdprofiles.provider.StereotypableElementDecoratorAdapterFactory;\nimport org.palladiosimulator.pcm.ui.provider.PalladioItemProviderAdapterFactory;\nimport org.eclipse.emf.edit.provider.IDisposable;"
 			}
 			mapping = {
 				from = "protected ComposedAdapterFactory adapterFactory;"
@@ -123,6 +116,10 @@ Workflow {
 			mapping = {
 				from = "adapterFactory.dispose\\(\\);"
 				to = "((IDisposable) (adapterFactory)).dispose();"
+			}
+			mapping = {
+			    from = "propertySheetPage\\.setPropertySourceProvider\\(new AdapterFactoryContentProvider\\("
+			    to = "propertySheetPage.setPropertySourceProvider(new PalladioAdapterFactoryContentProvider("
 			}
 		}
 	}
