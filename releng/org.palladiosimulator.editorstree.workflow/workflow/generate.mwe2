@@ -10,8 +10,6 @@ import tools.mdsd.ecoreworkflow.umlecoregenerator.UMLEcoreGenerator
 import java.util.regex.Pattern
 
 var workspaceRoot = "../../"
-var projectName = "org.palladiosimulator.pcm"
-var pluginEditorDir = "${workspaceRoot}/bundles/${projectName}.editor"
 
 Workflow {
 	
@@ -126,9 +124,10 @@ Workflow {
 	
 	component = RegexComponent {
 		replacement = {
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/resourcetype/presentation/ResourcetypeEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/usagemodel/presentation/UsagemodelEditor.java"
-			filename =  "${pluginEditorDir}/src-gen/org/palladiosimulator/pcm/qosannotations/presentation/QosannotationsEditor.java"
+			directory = "platform:/resource/org.palladiosimulator.pcm.editor/src-gen/org/palladiosimulator/pcm/"
+			filename =  "resourcetype/presentation/ResourcetypeEditor.java"
+			filename =  "usagemodel/presentation/UsagemodelEditor.java"
+			filename =  "qosannotations/presentation/QosannotationsEditor.java"
 			
 			mapping = {
 				from = "\t\tComposedAdapterFactory compAdapterFactory = new ComposedAdapterFactory\\(ComposedAdapterFactory.Descriptor.Registry.INSTANCE\\);"
